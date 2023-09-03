@@ -7,10 +7,6 @@ const userName = query.get('userName');
 
 const room = query.get('room');
 
-console.log('#### query : ' + query);
-console.log('#### userName : ' + userName);
-console.log('#### room : ' + room);
-
 // server로 데이터를 보냄
 socket.emit('join', { userName, room }, (error) => {
   if(error) {
